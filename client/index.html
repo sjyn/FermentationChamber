@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fermentation Station</title>
+  <meta charset="utf-8"/>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="https://cdnjs.com/libraries/Chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+<h1>Fermentation Cabinet</h1>
+<h4>Current State</h4>
+<div id="app">
+  <div class="current-bounds">
+    <h5>Current Bounds</h5>
+    <span>{{ upperBound.c }}&#176;C ({{ upperBound.f }}&#176;F)</span>
+    <span>{{ lowerBound.c }}&#176;C ({{ lowerBound.f }}&#176;F)</span>
+  </div>
+  <div class="temps">
+    <h5>Last 24 Hours Temperatures</h5>
+    <canvas id="myChart" width="400" height="400"></canvas>
+  </div>
+</div>
+<script src="js/api.js" type="application/javascript"></script>
+<script src="js/chart.js" type="application/javascript"></script>
+<script src="index.js" type="application/javascript"></script>
+</body>
+</html>

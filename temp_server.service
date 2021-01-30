@@ -1,0 +1,14 @@
+[Unit]
+Description=Temperature Board Server
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u Api/Server.py
+WorkingDirectory=/home/pi/controller/server
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
